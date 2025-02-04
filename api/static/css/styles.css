@@ -1,0 +1,104 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #343a40 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Main container */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Titles */
+.card-title {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Form Elements */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(45deg, #4285f4, #1a73e8);
+  border: none;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #1a73e8, #4285f4);
+}
+
+/* Alerts */
+.alert {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive spacing for smaller devices */
+@media (max-width: 576px) {
+  .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .card {
+    margin: 1rem;
+  }
+}

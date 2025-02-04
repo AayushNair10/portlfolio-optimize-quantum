@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Stock Price Analysis</h2>
+        <div class="mb-3">
+            {{ plot_html | safe }}
+        </div>
+        <h4>Optimization Results:</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Assets Selected</th>
+                    <th>Objective Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in optimization_results %}
+                    <tr>
+                        <td>{{ result.method }}</td>
+                        <td>{{ result.assets | join(', ') }}</td>
+                        <td>{{ result.value }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Portfolio Optimization</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f8f9fa; margin: 2rem; }
+        .results-box { padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin: 2rem 0; }
+        .method-result { padding: 1.5rem; background: #f8fafc; border-left: 4px solid #3b82f6; border-radius: 4px; margin-bottom: 1rem; }
+        .method-result h3 { color: #1e3a8a; }
+        .method-result ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .method-result li { background: #e0f2fe; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+        .method-result p { color: #059669; font-weight: 600; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <h1>Quantum-Optimized Portfolio</h1>
+
+    <div class="results-box">
+        <h2>Optimization Results Comparison</h2>
+        {% for result in optimization_results %}
+        <div class="method-result">
+            <h3>{{ result.method }}</h3>
+            <ul>
+                {% for asset in result.assets %}
+                <li>{{ asset }}</li>
+                {% endfor %}
+            </ul>
+            <p>Optimized Value: {{ result.value }}</p>
+        </div>
+        
+        {% endfor %}
+    </div>
+
+    <h1>Stock Prices Over Time</h1>
+    <div>{{ plot_html | safe }}</div>
+</body>
+<style>
+    
+</style>
+</html>

@@ -1,0 +1,7 @@
+Flask
+pymongo
+numpy
+yfinance
+plotly
+qiskit
+qiskit_optimization
